@@ -5,7 +5,7 @@ class FiniteAutomaton:
         self.states = grammar.non_terminals.union({"F"})
         self.alphabet = grammar.terminals
         self.transitions = {state: {} for state in self.states}
-        self.start_state = grammar.start_symbol
+        self.start_state = grammar.start_symbols
         self.final_states = {"F"}
         self.__build_transitions(grammar)
 
