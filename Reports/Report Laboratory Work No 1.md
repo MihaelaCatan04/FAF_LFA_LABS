@@ -1,13 +1,12 @@
-# Laboratory Work Report
-## Formal Languages & Finite Automata
+# Intro to formal languages. Regular grammars. Finite Automata.  
 
-**Topic:** Intro to formal languages. Regular grammars. Finite Automata.  
-**Course:** Formal Languages & Finite Automata  
-**Author:** Mihaela Catan, st.gr.FAF-231
-**Verified by:** Dumitru Crețu, university Assistant 
-**Date:** February 16, 2025
+### Course: Formal Languages & Finite Automata  
+### Author: Mihaela Catan, st.gr.FAF-231
+### Verified by: Dumitru Crețu, University Assistant 
 
-## Introduction
+----
+
+## Theoretical Background
 
 In computer science, formal languages serve as the foundation for communication between machines and humans. This laboratory work explores the fundamental concepts of formal languages, regular grammars, and finite automata, with a focus on their implementation in Python.
 
@@ -15,8 +14,6 @@ A formal language comprises several essential components:
 - **Alphabet:** A set of valid characters
 - **Vocabulary:** A set of valid words
 - **Grammar:** A set of rules and constraints governing the language
-
-## Theoretical Background
 
 ### Formal Languages
 
@@ -92,7 +89,7 @@ This laboratory work aims to achieve the following objectives:
    - Converting itself to a Finite Automaton
 4. Implement a `FiniteAutomaton` class with string validation capabilities
 
-## Implementation
+## Implementation description
 
 ### Project Setup
 
@@ -497,8 +494,8 @@ This practical demonstration reinforces the theoretical concept that regular gra
 
 ## Execution Screenshots
 
-![Grammar String Generation](https://placeholder-image.com/grammar_generation.png)
-![Finite Automaton Validation](https://placeholder-image.com/automaton_validation.png)
+![Grammar String Generation Validation](![image](https://github.com/user-attachments/assets/bb259827-23ad-45a4-ac99-d2957b3fa174))
+![Finite Automaton Validation](![image](https://github.com/user-attachments/assets/5a883861-9bb9-4054-8d6d-a721b7ff2c27))
 
 ## Conclusions
 
@@ -510,24 +507,3 @@ This laboratory work successfully implemented and tested a formal grammar and it
 4. Testing the functionality of both classes through comprehensive unit tests
 
 The implementation demonstrates the fundamental relationship between formal grammars and finite automata, providing a solid foundation for further exploration of more complex formal language concepts in future laboratory works.
-
-### Limitations and Future Work
-
-While the current implementation successfully demonstrates the basic concepts, there are several limitations and opportunities for future enhancements:
-
-1. The grammar implementation is limited to right-linear regular grammars. Supporting left-linear grammars would provide a more complete implementation.
-2. The automaton implementation is non-deterministic. Adding support for converting to a deterministic finite automaton would be a valuable extension.
-3. The string generation algorithm uses a breadth-first approach, which may not be optimal for all grammars. Implementing alternative algorithms, such as depth-first generation, could be beneficial.
-
-These limitations provide opportunities for future work, building on the solid foundation established in this laboratory assignment.
-
-### Learning Outcomes
-
-Through this laboratory work, several key learning outcomes were achieved:
-
-1. Deepened understanding of formal languages, regular grammars, and finite automata
-2. Gained practical experience in implementing theoretical concepts
-3. Developed skills in testing and validating algorithm implementations
-4. Enhanced ability to analyze and reason about formal language concepts
-
-These outcomes provide a solid foundation for future studies in formal languages and automata theory, which are essential for understanding compiler design, parsing algorithms, and formal verification techniques.
