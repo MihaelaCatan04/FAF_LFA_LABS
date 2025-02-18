@@ -1,5 +1,6 @@
 import random
 
+
 class Grammar:
     def __init__(self, non_terminals, terminals, productions, start_symbol):
         self.non_terminals = non_terminals

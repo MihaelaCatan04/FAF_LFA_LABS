@@ -1,9 +1,10 @@
+from Lab1.FiniteAutomaton import FiniteAutomaton
 from Lab1.Grammar import Grammar
 
 
 def main():
-    non_terminals = ["S", "I", "J", "K"]
-    terminals = ["a", "b", "c", "e", "n", "f", "m"]
+    non_terminals = {"S", "I", "J", "K"}
+    terminals = {"a", "b", "c", "e", "n", "f", "m"}
     productions = {
         'S': ['cI'],
         'I': ['bJ', 'fI', 'e', 'eK'],
@@ -13,7 +14,9 @@ def main():
     start_symbol = "S"
 
     grammar = Grammar(non_terminals, terminals, productions, start_symbol)
-    print(grammar.generate_strings(5))
+    # print(grammar.generate_strings(5))
+    finite_automaton = FiniteAutomaton(grammar)
+    finite_automaton.display_transitions()
 
 if __name__=="__main__":
     main()
