@@ -16,7 +16,7 @@ def main():
     grammar = Grammar(non_terminals, terminals, productions, start_symbol)
     # print(grammar.generate_strings(5))
     finite_automaton = FiniteAutomaton(grammar)
-    finite_automaton.display_transitions()
+    print(finite_automaton.check_string("cbccfem"))
 
 if __name__=="__main__":
     main()

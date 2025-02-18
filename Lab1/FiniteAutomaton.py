@@ -1,3 +1,4 @@
+from collections import deque
 class FiniteAutomaton:
     def __init__(self, grammar):
         self.states = grammar.non_terminals.union({"F"})  # Add final state "F"
@@ -26,3 +27,17 @@ class FiniteAutomaton:
         for state, transitions in self.transitions.items():
             for symbol, target_states in transitions.items():
                 print(f"State {state} --({symbol})--> {target_states}")
+
+    def check_string(self, given_input):
+        queue = deque([(self.start_state, 0)])
+        while queue:
+            current_state, index = queue.popleft()
+            if index == len(given_input):
+                if current_state in self.final_state:
+                    return True
+                continue
+            symbol = given_input[index]
+            if symbol in self.transitions.get(current_state):
+                for next_state in self.transitions[current_state][symbol]:
+                    queue.append((next_state, index + 1))
+        return False
