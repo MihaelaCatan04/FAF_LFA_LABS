@@ -494,9 +494,12 @@ This practical demonstration reinforces the theoretical concept that regular gra
 
 ## Execution Screenshots
 
-![Grammar String Generation Validation](![image](https://github.com/user-attachments/assets/bb259827-23ad-45a4-ac99-d2957b3fa174))
+![Grammar String Generation Validation](![image](https://github.com/user-attachments/assets/8489cc40-9fa1-4b83-8013-3574730897b4)
+)
 
-![Finite Automaton Validation](![image](https://github.com/user-attachments/assets/5a883861-9bb9-4054-8d6d-a721b7ff2c27))
+![Finite Automaton Validation](![image](https://github.com/user-attachments/assets/771b7860-d70b-4a92-ab01-711ed6e323b0)
+)
+
 
 ## Conclusions
 
