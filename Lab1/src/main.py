@@ -1,5 +1,5 @@
-from Lab1.FiniteAutomaton import FiniteAutomaton
-from Lab1.Grammar import Grammar
+from Lab1.src.FiniteAutomaton import FiniteAutomaton
+from Lab1.src.Grammar import Grammar
 
 
 def main():
