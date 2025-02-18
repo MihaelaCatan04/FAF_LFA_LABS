@@ -1,0 +1,14 @@
+Variant 6:
+VN={S, I, J, K},
+VT={a, b, c, e, n, f, m},
+P={
+    S → cI
+    I → bJ
+    I → fI
+    J → nJ
+    J → cS
+    I → eK
+    K → nK
+    I → e
+    K → m
+}
