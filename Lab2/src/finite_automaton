@@ -1,0 +1,14 @@
+// Finite Automaton
+digraph {
+	q2
+	q1
+	q4 [shape=doublecircle]
+	q3
+	q0 [shape=doublecircle style=dashed]
+	q0 -> q1 [label=a]
+	q1 -> q1 [label=b]
+	q1 -> q2 [label=b]
+	q2 -> q3 [label=b]
+	q3 -> q1 [label=a]
+	q2 -> q4 [label=a]
+}
