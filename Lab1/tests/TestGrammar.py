@@ -39,6 +39,8 @@ class TestGrammar(unittest.TestCase):
         generated_string = self.grammar.generate_string()
         self.assertTrue(all(char in self.terminals for char in generated_string), "Invalid production used.")
 
+    def test_grammar_type(self):
+        self.assertEqual(self.grammar.return_grammar_type(), "Grammar Type 3")
 
 if __name__ == "__main__":
     unittest.main()
