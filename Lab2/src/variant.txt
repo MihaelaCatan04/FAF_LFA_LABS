@@ -1,0 +1,25 @@
+Given that:
+AF = (Q,∑,δ,q0,F)
+
+Q = {q0,q1,q2,q3,q4},
+∑ = {a,b},
+F = {q4},
+δ(q0,a) = q1,
+δ(q1,b) = q1,
+δ(q1,b) = q2,
+δ(q2,b) = q3,
+δ(q3,a) = q1,
+δ(q2,a) = q4.
+
+states = {"q0", "q1", "q2", "q3", "q4"}
+alphabet = {"a", "b"}
+transitions = [
+    {"state": "q0", "symbol": "a", "to": "q1"},
+    {"state": "q1", "symbol": "b", "to": "q1"},
+    {"state": "q1", "symbol": "b", "to": "q2"},
+    {"state": "q2", "symbol": "b", "to": "q3"},
+    {"state": "q3", "symbol": "a", "to": "q1"},
+    {"state": "q2", "symbol": "a", "to": "q4"},
+]
+initial_state = "q0"
+final_states = {"q4"}
