@@ -16,5 +16,11 @@ final_state = {"q4"}
 finite_automaton = FiniteAutomaton.FiniteAutomaton(states, alphabet, initial_state, final_state, transitions)
 print(finite_automaton.is_deterministic())
 print(finite_automaton.convert_to_grammar().print_grammar())
-finite_automaton.visualize()
+finite_automaton.visualize("NDFA")
 
+
+# Convert to DFA
+dfa = finite_automaton.convert_to_dfa()
+
+# You can visualize the resulting DFA
+dfa.visualize("DFA")
