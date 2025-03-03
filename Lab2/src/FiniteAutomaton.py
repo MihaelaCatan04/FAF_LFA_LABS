@@ -174,3 +174,4 @@ class FiniteAutomaton:
         )
 
         return dfa
+
