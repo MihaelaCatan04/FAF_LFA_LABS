@@ -1,0 +1,51 @@
+// StructuredRecipeLang - A Structured DSL for Recipes
+
+RECIPE {
+  TITLE: "Simple Pancakes";
+
+  YIELD: 4;
+  TIME: 30 min;
+
+  INGREDIENT: 200 g "flour";
+  INGREDIENT: 2 "eggs";
+  INGREDIENT: 300 ml "milk";
+  INGREDIENT: 25 g "butter";
+  INGREDIENT: 1 tbsp "sugar";
+
+  STEP: "Mix flour and sugar in a bowl";
+  STEP: "Beat eggs and milk together";
+  STEP: "Combine wet and dry ingredients";
+  STEP: "Melt butter and add to mixture";
+  STEP: "Heat pan to medium heat";
+  STEP: "Pour batter and cook until bubbles form";
+  STEP: "Flip and cook until golden";
+
+  TEMP: 180 C;
+}
+
+// ANOTHER EXAMPLE
+
+RECIPE {
+  TITLE: "Basic Tomato Sauce";
+
+  YIELD: 6;
+  TIME: 45 min;
+
+  INGREDIENT: 800 g "canned tomatoes";
+  INGREDIENT: 2 tbsp "olive oil";
+  INGREDIENT: 1 "onion";
+  INGREDIENT: 2 "garlic cloves";
+  INGREDIENT: 1 tsp "salt";
+  INGREDIENT: 0.5 tsp "black pepper";
+  INGREDIENT: 1 tsp "dried basil";
+
+  STEP: "Heat oil in a large saucepan";
+  STEP: "Dice onion and garlic finely";
+  STEP: "Sauté onion until translucent";
+  STEP: "Add garlic and cook for 1 minute";
+  STEP: "Add tomatoes and seasonings";
+  STEP: "Simmer on low heat for 30 minutes";
+  STEP: "Blend if smooth texture is desired";
+
+  TEMP: 120 C;
+}
