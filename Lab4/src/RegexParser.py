@@ -8,7 +8,7 @@ class RegexParser:
         self.logger = RegexLogger()
 
     def parse(self, pattern):
-        self.logger = RegexLogger()  # Reset logger for each new pattern
+        self.logger = RegexLogger() 
         self.logger.process(f"Parsing pattern: {pattern}")
         self.tokens = []
         i = 0
