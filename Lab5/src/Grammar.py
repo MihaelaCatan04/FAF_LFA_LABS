@@ -84,3 +84,38 @@ class Grammar:
         print(self.productions)
         return self
 
+    def eliminate_non_productive_symbols(self):
+        productive = set()
+
+        for nt, prods in self.productions.items():
+            for prod in prods:
+                if all(symbol in self.terminals for symbol in prod):
+                    productive.add(nt)
+                    break
+
+        changed = True
+        while changed:
+            changed = False
+            for nt, prods in self.productions.items():
+                if nt in productive:
+                    continue
+
+                for prod in prods:
+                    if all(symbol in self.terminals or symbol in productive for symbol in prod):
+                        productive.add(nt)
+                        changed = True
+                        break
+
+        new_non_terminals = {nt for nt in self.non_terminals if nt in productive}
+        new_productions = {}
+
+        for nt in new_non_terminals:
+            new_productions[nt] = [prod for prod in self.productions.get(nt, [])
+                                   if all(symbol not in self.non_terminals or symbol in productive
+                                          for symbol in prod)]
+
+        self.non_terminals = new_non_terminals
+        self.productions = new_productions
+        print(self.productions)
+        return self
+
