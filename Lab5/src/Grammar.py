@@ -56,5 +56,31 @@ class Grammar:
         print(self.productions)
         return self
 
+    def eliminate_unit_productions(self):
+        unit_pairs = {}
+        for nt in self.non_terminals:
+            unit_pairs[nt] = {nt}
 
+        changed = True
+        while changed:
+            changed = False
+            for a in self.non_terminals:
+                for prod in self.productions.get(a, []):
+                    if prod in self.non_terminals:
+                        for b in unit_pairs.get(prod, set()):
+                            if b not in unit_pairs[a]:
+                                unit_pairs[a].add(b)
+                                changed = True
+
+        new_productions = {nt: [] for nt in self.non_terminals}
+
+        for a in self.non_terminals:
+            for b in unit_pairs[a]:
+                for prod in self.productions.get(b, []):
+                    if prod not in self.non_terminals and prod not in new_productions[a]:
+                        new_productions[a].append(prod)
+
+        self.productions = new_productions
+        print(self.productions)
+        return self
 

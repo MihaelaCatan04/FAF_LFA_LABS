@@ -7,3 +7,4 @@ grammar = Grammar.Grammar({"S", "A", "B", "C", "E"}, {"a", "b"}, {
             'E': ['bB'],
         }, "S")
 grammar.eliminate_empty_productions()
+grammar.eliminate_unit_productions()
