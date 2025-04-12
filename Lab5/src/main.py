@@ -9,3 +9,4 @@ grammar = Grammar.Grammar({"S", "A", "B", "C", "E"}, {"a", "b"}, {
 grammar.eliminate_empty_productions()
 grammar.eliminate_unit_productions()
 grammar.eliminate_non_productive_symbols()
+grammar.eliminate_inaccessible_symbols()

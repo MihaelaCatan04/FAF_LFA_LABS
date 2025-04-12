@@ -119,3 +119,28 @@ class Grammar:
         print(self.productions)
         return self
 
+    def eliminate_inaccessible_symbols(self):
+        accessible = {self.start_symbol}
+        queue = [self.start_symbol]
+
+        while queue:
+            current = queue.pop(0)
+            for prod in self.productions.get(current, []):
+                for symbol in prod:
+                    if symbol in self.non_terminals and symbol not in accessible:
+                        accessible.add(symbol)
+                        queue.append(symbol)
+
+        new_non_terminals = {nt for nt in self.non_terminals if nt in accessible}
+        new_productions = {}
+
+        for nt in new_non_terminals:
+            new_productions[nt] = [prod for prod in self.productions.get(nt, [])
+                                   if all(symbol not in self.non_terminals or symbol in accessible
+                                          for symbol in prod)]
+
+        self.non_terminals = new_non_terminals
+        self.productions = new_productions
+        print(self.productions)
+        return self
+
