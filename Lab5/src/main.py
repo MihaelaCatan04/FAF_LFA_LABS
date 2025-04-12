@@ -6,3 +6,4 @@ grammar = Grammar.Grammar({"S", "A", "B", "C", "E"}, {"a", "b"}, {
             'C': ['epsilon', 'BA'],
             'E': ['bB'],
         }, "S")
+grammar.eliminate_empty_productions()
