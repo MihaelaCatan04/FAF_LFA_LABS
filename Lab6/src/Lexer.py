@@ -1,6 +1,7 @@
 import re
-from Token import Token
-from TokenType import TokenType
+
+from Lab6.src.Token import Token
+from Lab6.src.TokenType import TokenType
 
 
 class Lexer:
