@@ -1,5 +1,6 @@
 from Lab6.src.Lexer import Lexer
 from Lab6.src.Parser import Parser
+from Lab6.src.visualize_ast import visualize_ast
 
 test_recipe = '''
 RECIPE {
@@ -39,4 +40,6 @@ print()
 parser = Parser(tokens)
 recipe_ast = parser.parse()
 
-
+print("Abstract Syntax Tree:")
+print(recipe_ast)
+visualize_ast(recipe_ast)
